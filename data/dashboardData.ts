@@ -34,6 +34,7 @@ export const featuredTools = [
     description: "Get instant help with your learning questions using our advanced AI chatbot.",
     rating: 4.8,
     category: "AI Tool",
+    href: "/tools/ai-chatbot-assistant",
   },
   {
     icon: Zap,
@@ -41,6 +42,7 @@ export const featuredTools = [
     description: "Discover personalized career paths based on your skills and interests.",
     rating: 4.6,
     category: "Career",
+    href: "/tools/career-path-generator",
   },
   {
     icon: VrIcon,
@@ -48,5 +50,6 @@ export const featuredTools = [
     description: "Immersive learning experiences with augmented and virtual reality.",
     rating: 4.9,
     category: "Innovation",
+    href: "/tools/ar-vr-learning-experience",
   },
 ]

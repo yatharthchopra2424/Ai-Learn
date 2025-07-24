@@ -1,5 +1,6 @@
 "use client"
 import { useState } from "react"
+import Link from "next/link"
 import Sidebar from "@/components/dashboard/Sidebar"
 import Topbar from "@/components/dashboard/Topbar"
 import { Search, Filter, Star, Users, ExternalLink, Zap, Bot, Brain, Code, Database, Globe } from "lucide-react"
@@ -22,6 +23,7 @@ const tools = [
     features: ["24/7 Availability", "Multi-language Support", "Context Awareness", "Learning Recommendations"],
     featured: true,
     inUse: false,
+    href: "/tools/ai-chatbot-assistant",
   },
   {
     id: 2,
@@ -38,6 +40,7 @@ const tools = [
     features: ["Skill Assessment", "Market Analysis", "Personalized Roadmap", "Industry Insights"],
     featured: true,
     inUse: true,
+    href: "/tools/career-path-generator",
   },
   {
     id: 3,
@@ -53,6 +56,7 @@ const tools = [
     features: ["Code Analysis", "Best Practices", "Security Checks", "Performance Tips"],
     featured: false,
     inUse: false,
+    href: "/tools/code-review-assistant",
   },
   {
     id: 4,
@@ -68,6 +72,7 @@ const tools = [
     features: ["Drag & Drop Interface", "AI Suggestions", "Export Options", "Real-time Collaboration"],
     featured: true,
     inUse: false,
+    href: "/tools/data-visualization-studio",
   },
   {
     id: 5,
@@ -85,6 +90,7 @@ const tools = [
     features: ["PDF Analysis", "Key Insights", "Citation Generator", "Summary Creation"],
     featured: true,
     inUse: false,
+    href: "/tools/research-paper-analyzer",
   },
   {
     id: 6,
@@ -101,6 +107,7 @@ const tools = [
     features: ["Voice Recognition", "Grammar Correction", "Cultural Context", "Progress Tracking"],
     featured: false,
     inUse: true,
+    href: "/tools/language-learning-companion",
   },
   {
     id: 7,
@@ -118,6 +125,7 @@ const tools = [
     features: ["3D Environments", "Hand Tracking", "Voice Commands", "Multi-user Sessions"],
     featured: true,
     inUse: false,
+    href: "/tools/ar-vr-learning-experience",
   },
 ]
 
@@ -305,10 +313,10 @@ export default function Library() {
                         </div>
                       </div>
 
-                      <button className="w-full btn-primary flex items-center justify-center space-x-2">
+                      <Link href={tool.href} className="w-full btn-primary flex items-center justify-center space-x-2">
                         <span>{tool.inUse ? "Open Tool" : "Try Now"}</span>
                         <ExternalLink className="h-4 w-4" />
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 ))}
@@ -397,10 +405,10 @@ export default function Library() {
                       </div>
                     )}
 
-                    <button className="w-full btn-primary flex items-center justify-center space-x-2">
+                    <Link href={tool.href} className="w-full btn-primary flex items-center justify-center space-x-2">
                       <span>{tool.inUse ? "Open Tool" : "Try Now"}</span>
                       <ExternalLink className="h-4 w-4" />
-                    </button>
+                    </Link>
                   </div>
                 </div>
               ))}

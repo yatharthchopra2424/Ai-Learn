@@ -1,5 +1,6 @@
 import { Star, ExternalLink } from "lucide-react"
 import type { LucideIcon } from "lucide-react"
+import Link from "next/link"
 
 interface FeaturedToolCardProps {
   icon: LucideIcon
@@ -7,9 +8,10 @@ interface FeaturedToolCardProps {
   description: string
   rating: number
   category: string
+  href: string
 }
 
-export default function FeaturedToolCard({ icon: Icon, title, description, rating, category }: FeaturedToolCardProps) {
+export default function FeaturedToolCard({ icon: Icon, title, description, rating, category, href }: FeaturedToolCardProps) {
   return (
     <div className="card group hover:scale-105 transition-transform">
       <div className="flex items-start justify-between mb-4">
@@ -27,10 +29,10 @@ export default function FeaturedToolCard({ icon: Icon, title, description, ratin
           <Star className="h-4 w-4 text-yellow-400 fill-current" />
           <span className="text-sm font-medium text-slate-700">{rating}</span>
         </div>
-        <button className="flex items-center space-x-1 text-yellow-600 hover:text-yellow-700 font-medium text-sm transition-colors">
+        <Link href={href} className="flex items-center space-x-1 text-yellow-600 hover:text-yellow-700 font-medium text-sm transition-colors">
           <span>Try Now</span>
           <ExternalLink className="h-4 w-4" />
-        </button>
+        </Link>
       </div>
     </div>
   )
