@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata = {
   title: "AI Learning Platform",
   description: "Learn AI, digital innovation, and 21st-century skills",
-    generator: 'v0.dev'
+    generator: 'ai-learn',
 }
 
 export default function RootLayout({
